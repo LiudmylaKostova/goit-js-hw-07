@@ -12,9 +12,11 @@ inputRef.addEventListener('change', (event) => {
     console.log(event.target.value.length);
      	if (event.target.value.length >= inputLength) {
               inputRef.classList.add('valid');
+              inputRef.classList.remove('invalid');
               console.log('cool');
     } else {
               inputRef.classList.add('invalid');
+              inputRef.classList.remove('valid');
               console.log('not correct!');
 };
 });
