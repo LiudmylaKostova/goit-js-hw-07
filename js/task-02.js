@@ -1,4 +1,6 @@
-// Напиши скрипт, который для каждого элемента массива ingredients создаст отдельный li, после чего вставит все li за одну операцию в список ul.ingredients. Для создания DOM-узлов используй document.createElement().
+/* Напиши скрипт, который для каждого элемента массива ingredients создаст отдельный li, после чего вставит
+все li за одну операцию в список ul.ingredients. Для создания DOM-узлов используй document.createElement().*/
+
 const ingredients = [
   'Картошка',
   'Грибы',
@@ -14,7 +16,6 @@ const ingredients = [
 //  const ulRefArray = ingredients.map((ingredient) => {
 //   const liRef = document.createElement("li");
 //    liRef.textContent = ingredient;
-//    console.log(liRef);
 //    return liRef;
 //     });
 
@@ -22,14 +23,12 @@ const ingredients = [
 // console.log(ulRef);
 
 // 2 variant
-const ulRef = document.querySelector("ul");
 
-for (let i = 0; i < ingredients.length; i+=1) {
+const ulRef = document.querySelector('ul');
+
+for (let i = 0; i < ingredients.length; i += 1) {
   const liRef = document.createElement('li');
   liRef.textContent = ingredients[i];
   ulRef.append(liRef);
   console.log(liRef);
-  
 }
- console.log(ulRef);
-
