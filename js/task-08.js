@@ -33,18 +33,13 @@ const createBoxes = function (amount) {
   }
 };
 
-// btnDestroyRef.addEventListener('click', () => {
-//   divRef.innerHTML = '';
-//   inputRef.value = '';
-// });
 btnRenderRef.addEventListener('click', () => createBoxes(inputRef.value));
-
-// ======ИЛИ вызываем функцию destroyBoxes=====
 
 const destroyBoxes = function () {
   inputRef.value = '';
-  let element = document.querySelectorAll('.box');
-  element.forEach(el => el.remove());
+  divRef.innerHTML = '';
+  // let element = document.querySelectorAll('.box');
+  // element.forEach(el => el.remove());
 };
 
 btnDestroyRef.addEventListener('click', destroyBoxes);
